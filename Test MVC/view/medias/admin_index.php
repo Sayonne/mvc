@@ -29,7 +29,7 @@
 	<h1>Ajouter une image</h1>
 </div>
 
-<form action="<?php echo Router::url('admin/medias/index/'.$post_id); ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
+<form action="<?php echo Router::url('admin/medias/index/'); ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
 	<?php echo $this->Form->input('file','Image',array('type' => 'file')) ; ?>
 	<?php echo $this->Form->input('name','Titre') ; ?>
 	<div class="form-group">

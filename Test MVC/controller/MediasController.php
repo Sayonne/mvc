@@ -1,7 +1,7 @@
 <?php
 class MediasController extends Controller {
 
-	function admin_index($id){
+	function admin_index($id = null){
 
 		$this->layout = 'modal';
 		$this->loadModel('Media');

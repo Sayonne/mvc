@@ -42,7 +42,10 @@ class Form {
 						</div>';
 	    } elseif($options['type'] == 'file') {
 	    	$html .= '	<div class="col-xs-4">
-	    				<input type="file" class="input-file" id="input'.$name.'" name="'.$name.'" value="'.$value.'" />';
+	    				<input type="file" class="input-file" id="input'.$name.'" name="'.$name.'" />';
+	    } elseif($options['type'] == 'password') {
+	    	$html .= '	<div class="col-xs-4">
+	    				<input type="password" class="form-control" id="input'.$name.'" name="'.$name.'" value="'.$value.'" />';
 	    }
 	    if($errors){
 	    	$html .= '	<span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
