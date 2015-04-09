@@ -4,7 +4,7 @@ class PostsController extends Controller{
 
 	function index(){
 
-		$perPage = 1; 
+		$perPage = 5; 
 		$this->loadModel('Post');
 		$conditions = array('type' => 'post', 'online' => 1);
 		$d['posts'] = $this->Post->find(array(

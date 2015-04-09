@@ -25,9 +25,10 @@
 			   	 	<li><a href="<?php echo Router::url('admin/posts/index'); ?>">Articles</a></li>
 			   	 	<li><a href="<?php echo Router::url('admin/pages/index'); ?>">Pages</a></li>
 			   	 	<li><a href="<?php echo Router::url(); ?>">Retour au site</a></li>
-			   	 	<li><a href="<?php echo Router::url('users/logout'); ?>">Déconnexion</a></li>
-
 		      	</ul>
+		      	<ul class="nav navbar-nav navbar-right">
+			        <li><a href="<?php echo Router::url('users/logout'); ?>">Déconnexion</a></li>
+			    </ul>
 		    </div><!-- /.navbar-collapse -->
 	  	</div><!-- /.container-fluid -->
 	</nav>

@@ -12,6 +12,6 @@ new Dispatcher();
 new Model();
 ?>
 
-<div style="position: fixed; bottom: 0; background: #900; color: #FFF; line-height: 30px; left: 0; right: 0; padding-left: 10px;"> 
+<!-- <div style="position: fixed; bottom: 0; background: #900; color: #FFF; line-height: 30px; left: 0; right: 0; padding-left: 10px;"> 
 <?php echo 'Page générée en : '.round(microtime(true) - $debut,5).' secondes.'; ?>
-</div>
+</div> -->

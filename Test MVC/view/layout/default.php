@@ -16,7 +16,7 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		      </button>
-		      <a class="navbar-brand" href="#">Test MVC</a>
+		      <a class="navbar-brand" href="#">Site Perso</a>
 		    </div>
 
 		    <!-- Collect the nav links, forms, and other content for toggling -->
@@ -28,6 +28,9 @@
 			    	<?php endforeach; ?>
 			    	<li><a href="<?php echo Router::url('posts/index'); ?>">Actualités</a></li>
 		      	</ul>
+		      	<ul class="nav navbar-nav navbar-right">
+			        <li><a href="<?php echo BASE_URL.'/users/login'?>">Connexion</a></li>
+			    </ul>
 		    </div><!-- /.navbar-collapse -->
 	  	</div><!-- /.container-fluid -->
 	</nav>
