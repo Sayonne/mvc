@@ -2,7 +2,7 @@
 <head>
 	<meta charset="UTF-8" />
 	<title><?php echo isset($title_for_layout)?$title_for_layout:'Mon site'; ?></title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" media="screen" />
 </head>
 <body>
@@ -22,14 +22,18 @@
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      	<ul class="nav navbar-nav">
-		        	<?php $pagesMenu = $this->request('Pages', 'getMenu'); ?>
-			    	<?php foreach($pagesMenu as $p): ?>
-			   	 	<li><a href="<?php echo BASE_URL.'/pages/view/'.$p->id; ?>" title="<?php echo $p->name; ?>"><?php echo $p->name; ?></a></li>
-			    	<?php endforeach; ?>
-			    	<li><a href="<?php echo Router::url('posts/index'); ?>">Actualités</a></li>
+			    	<li><a href="<?php echo Router::url('posts/index'); ?>">Home</a></li>
+			    	<li><a href="<?php echo Router::url('calendar/index'); ?>">Calendar</a></li>
+			    	<li><a href="<?php echo Router::url('subcriptions/index'); ?>">Inscription</a></li>
+			    	<li><a href="<?php echo Router::url('contacts/index'); ?>">Contact</a></li>
 		      	</ul>
 		      	<ul class="nav navbar-nav navbar-right">
-			        <li><a href="<?php echo BASE_URL.'/users/login'?>">Connexion</a></li>
+		      	<?php if(!$this->Session->isLogged()){ ?>
+			        <li><a href="<?php echo Router::url('/users/login'); ?>">Connection</a></li>
+		      	<?php } else { ?>
+		      		<li><a href="<?php echo Router::url('admin/posts/index'); ?>">Administration</a></li>
+		      		<li><a href="<?php echo Router::url('users/logout'); ?>">Déconnexion</a></li>
+		      	<?php } ?>
 			    </ul>
 		    </div><!-- /.navbar-collapse -->
 	  	</div><!-- /.container-fluid -->

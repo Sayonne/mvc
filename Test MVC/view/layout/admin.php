@@ -24,6 +24,7 @@
 		      	<ul class="nav navbar-nav">
 			   	 	<li><a href="<?php echo Router::url('admin/posts/index'); ?>">Articles</a></li>
 			   	 	<li><a href="<?php echo Router::url('admin/pages/index'); ?>">Pages</a></li>
+			   	 	<li><a href="<?php echo Router::url('admin/calendar/index'); ?>">Calendrier</a></li>
 			   	 	<li><a href="<?php echo Router::url(); ?>">Retour au site</a></li>
 		      	</ul>
 		      	<ul class="nav navbar-nav navbar-right">

@@ -46,6 +46,12 @@ class Form {
 	    } elseif($options['type'] == 'password') {
 	    	$html .= '	<div class="col-xs-4">
 	    				<input type="password" class="form-control" id="input'.$name.'" name="'.$name.'" value="'.$value.'" />';
+	    } elseif($options['type'] == 'date') {
+	    	$html .= '	<div class="col-xs-4">
+	    				<input type="date" class="form-control" id="input'.$name.'" name="'.$name.'" value="'.$value.'" />';
+	    } elseif($options['type'] == 'email') {
+	    	$html .= '	<div class="col-xs-4">
+	    				<input type="email" class="form-control" id="input'.$name.'" name="'.$name.'" value="'.$value.'" />';
 	    }
 	    if($errors){
 	    	$html .= '	<span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
